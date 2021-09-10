@@ -6,6 +6,6 @@ mkdir $ROOT
 # Backup web files
 WEBPATH=$ROOT/web
 mkdir $WEBPATH
-rsync -a . $WEBPATH --exclude .git
+rsync -a --info=progress2 . $WEBPATH --exclude .git
 
 echo 'skyrim-mixer backup finished'
