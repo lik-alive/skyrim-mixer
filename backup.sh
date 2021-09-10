@@ -1,11 +1,13 @@
-echo 'skyrim-mixer backup started'
+title=skyrim-mixer
 
-ROOT=$1/skyrim-mixer
+echo $title backup started
+ROOT=$1/$title
 mkdir $ROOT
 
 # Backup web files
 WEBPATH=$ROOT/web
 mkdir $WEBPATH
-rsync -a --info=progress2 . $WEBPATH --exclude .git
+#rsync -a --info=progress2 . $WEBPATH --exclude .git
+tar cf - --exclude ".git" . | pv -s $(du -sb . | awk '{print $1}') | gzip > $WEBPATH/$title.tar.gz
 
-echo 'skyrim-mixer backup finished'
+echo $title backup finished
