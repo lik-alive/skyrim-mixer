@@ -7,7 +7,5 @@ services:
     container_name: skyrim-mixer
     user: $USER
     restart: always
-    volumes:
-      - ./src:/app
     ports:
       - "8001:8000"
