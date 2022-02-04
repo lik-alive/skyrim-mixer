@@ -21,6 +21,7 @@ print("""<!DOCTYPE HTML>
                     font-size: 30pt;
                     padding: 0 10vw;
                     color: #eee;
+                    background-color: black;
                 }
 
                 a {

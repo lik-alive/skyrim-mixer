@@ -8,6 +8,6 @@ services:
     user: $USER
     restart: always
     volumes:
-      - ../:/app
+      - ./src:/app
     ports:
       - "8001:8000"
