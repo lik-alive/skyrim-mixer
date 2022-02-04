@@ -3,6 +3,9 @@ version: "3"
 services:
   app:
     build: .
+    image: skyrim-mixer
+    container_name: skyrim-mixer
+    user: $USER
     volumes:
       - ../:/app
     ports:

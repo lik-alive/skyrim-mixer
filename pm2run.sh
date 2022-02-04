@@ -8,4 +8,4 @@ reload () {
     fi
 }
 
-reload server.py skymix_server
+#reload server.py skymix_server

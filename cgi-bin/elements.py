@@ -43,7 +43,7 @@ print("""<!DOCTYPE HTML>
                     z-index: -1;
                     height: 100vh;
                     width: 100vw;
-                    background: url(/skyrim-mixer/images/bg.jpg), #555;
+                    background: url(/arch/skyrim-mixer/images/bg.jpg), #555;
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: right;
@@ -88,7 +88,7 @@ for el in alchemy.dict:
 print("</div>")
 
 print("""
-        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js"></script> 
+        <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js"></script> 
         <script>
             $('#elements a').last().addClass('last');
         

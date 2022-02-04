@@ -1,2 +1,2 @@
 # build container
-docker-compose up -d --remove-orphans --build
+USER=$(id -u) docker-compose up -d --remove-orphans --build
