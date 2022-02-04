@@ -9,6 +9,7 @@ print("""<!DOCTYPE HTML>
         <head>
             <meta charset="utf-8">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="icon" href="/arch/skyrim-mixer/images/favicon.ico">
             <title>Элементы</title>
             <style>
                 html {
@@ -58,6 +59,7 @@ print("""<!DOCTYPE HTML>
                 }
 
                 .form-control:focus {
+                    color: #fff;
                     background: #4444;
                     border-color: #aaa;
                     box-shadow: 0 0 0 0.2rem rgb(100 100 100 / 25%)
