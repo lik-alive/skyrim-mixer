@@ -1,4 +1,9 @@
 FROM python:3.10-alpine
-WORKDIR /app
-COPY ./src .
+
+RUN adduser -D worker
+USER worker
+
+WORKDIR /home/worker
+COPY --chown=worker:worker ./src .
+
 CMD [ "python3", "-m", "http.server", "--cgi" ]

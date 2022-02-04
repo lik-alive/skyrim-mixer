@@ -5,7 +5,6 @@ services:
     build: .
     image: skyrim-mixer
     container_name: skyrim-mixer
-    user: $USER
     restart: always
     ports:
       - "8001:8000"
