@@ -6,6 +6,7 @@ services:
     image: skyrim-mixer
     container_name: skyrim-mixer
     user: $USER
+    restart: always
     volumes:
       - ../:/app
     ports:
