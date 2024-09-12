@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  app:
+    user: "33:33"
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: prod_skymix
+    container_name: prod_skymix
+    env_file:
+      - .env
+    restart: always
+    volumes:
+      - ./src:/home/worker
+    ports:
+      - 9060:3000
