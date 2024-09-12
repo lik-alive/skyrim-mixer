@@ -118,15 +118,6 @@ def findElementsByEffect(str):
         raise Exception('DANGER! Elements with effect ' + str + ' not found')
     return els
 
-
-def testDict(count=3):
-    for key in dict:
-        for eff in dict[key]:
-            els = findElementsByEffect(eff)
-            if els.__len__() < count:
-                print(eff)
-
-
 def findMixes(arr, maxels = 2):
     if arr.__len__() == 0:
         return []
