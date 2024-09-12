@@ -3,13 +3,17 @@ import cgi
 
 import db.alchemy as alchemy
 
+# Load subfolder
+import os
+baseUrl = os.environ['BASE_URL']
+
 print("Content-type: text/html\n")
 print("""<!DOCTYPE HTML>
         <html>
         <head>
             <meta charset="utf-8">
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-            <link rel="icon" href="/arch/skyrim-mixer/images/favicon.ico">
+            <link rel="stylesheet" href=\"""" + baseUrl + """/resources/bootstrap.min.css">
+            <link rel="icon" href=\"""" +  baseUrl + """/images/favicon.ico">
             <title>Элементы</title>
             <style>
                 html {
@@ -45,7 +49,7 @@ print("""<!DOCTYPE HTML>
                     z-index: -1;
                     height: 100vh;
                     width: 100vw;
-                    background: url(/arch/skyrim-mixer/images/bg.jpg), #555;
+                    background: url(""" + baseUrl + """/images/bg.jpg), #555;
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: right;
@@ -91,7 +95,7 @@ for el in alchemy.dict:
 print("</div>")
 
 print("""
-        <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js"></script> 
+        <script type="text/javascript" src=\"""" + baseUrl + """/resources/jquery-3.4.1.slim.min.js"></script> 
         <script>
             $('#elements a').last().addClass('last');
         
