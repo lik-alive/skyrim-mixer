@@ -1,13 +1,15 @@
+#!/bin/bash
+### INFO
+# sudo ./backup.sh <dest_folder>
+###
+
 title=skyrim-mixer
 
 echo $title backup started
 ROOT=$1/$title
 mkdir $ROOT
 
-# Backup web files
-WEBPATH=$ROOT/web
-mkdir $WEBPATH
-#rsync -a --info=progress2 . $WEBPATH --exclude .git
-tar cf - --exclude ".git" . | pv -s $(du -sb . | awk '{print $1}') | gzip > $WEBPATH/$title.tar.gz
+# Backup source files
+tar cf - --exclude ".git" . | pv -s $(du -sb . | awk '{print $1}') | gzip > $ROOT/$title.tar.gz
 
 echo $title backup finished
